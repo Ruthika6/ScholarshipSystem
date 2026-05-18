@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scholarships</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <h1>🎓 Scholarship System</h1>
+    <div>
+        <a href="/">Students</a>
+        <a href="/scholarships">Scholarships</a>
+        <a href="/applications">Applications</a>
+        <a href="/disbursements">Disbursements</a>
+    </div>
+</nav>
+
+<div class="container">
+
+<div class="card">
+<h2>Add Scholarship</h2>
+<form method="POST" action="/scholarships">
+    <input type="text" name="id" placeholder="Scholarship ID" required>
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="text" name="criteria" placeholder="Criteria">
+    <input type="text" name="amount" placeholder="Amount">
+    <input type="text" name="deadline" placeholder="Deadline (YYYY-MM-DD)">
+    <button type="submit">Add Scholarship</button>
+</form>
+</div>
+
+<div class="card">
+<h2>Scholarship List</h2>
+<table>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Criteria</th>
+    <th>Amount</th>
+    <th>Deadline</th>
+</tr>
+
+{% for s in scholarships %}
+<tr>
+    <td>{{s.Scholarship_ID}}</td>
+    <td>{{s.Name}}</td>
+    <td>{{s.Criteria}}</td>
+    <td>{{s.Max_Amount}}</td>
+    <td>{{s.Deadline}}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+
+</div>
+</body>
+</html>

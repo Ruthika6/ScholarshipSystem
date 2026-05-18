@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+
+    <!-- ✅ CSS LINK -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h2>Students</h2>
+
+<form method="POST">
+ID: <input name="id"><br>
+Name: <input name="name"><br>
+Dept ID: <input name="dept"><br>
+Year: <input name="year"><br>
+CGPA: <input name="cgpa"><br>
+Income: <input name="income"><br>
+<button>Add</button>
+</form>
+
+<hr>
+
+{% for s in students %}
+<p>{{s.Student_ID}} - {{s.Name}}</p>
+{% endfor %}
+
+</body>
+</html>

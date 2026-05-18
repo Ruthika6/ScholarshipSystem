@@ -1,0 +1,123 @@
+/* -------- GLOBAL -------- */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+    color: #333;
+}
+
+/* -------- NAVBAR -------- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+}
+
+nav h1 {
+    color: white;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+/* -------- CONTAINER -------- */
+.container {
+    width: 85%;
+    margin: 30px auto;
+}
+
+/* -------- CARD -------- */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    margin-bottom: 25px;
+}
+
+/* -------- HEADINGS -------- */
+h2 {
+    margin-top: 0;
+    color: #444;
+}
+
+/* -------- FORM -------- */
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+form input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* -------- BUTTON -------- */
+button {
+    grid-column: span 2;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+/* -------- TABLE -------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background: #66eaa1;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+tr:hover td {
+    background: #eef1ff;
+}
+
+/* -------- ACTION BUTTONS -------- */
+.action-btn {
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.approve {
+    background: #2ecc71;
+}
+
+.reject {
+    background: #e74c3c;
+}

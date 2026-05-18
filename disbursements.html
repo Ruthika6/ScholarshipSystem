@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disbursements</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <h1>🎓 Scholarship System</h1>
+    <div>
+        <a href="/">Students</a>
+        <a href="/scholarships">Scholarships</a>
+        <a href="/applications">Applications</a>
+        <a href="/disbursements">Disbursements</a>
+    </div>
+</nav>
+
+<div class="container">
+
+<div class="card">
+<h2>Disbursement List</h2>
+<table>
+<tr>
+    <th>Disbursement ID</th>
+    <th>Application ID</th>
+    <th>Amount Paid</th>
+    <th>Status</th>
+</tr>
+{% for d in disbs %}
+<tr>
+    <td>{{d.Disbursement_ID}}</td>
+    <td>{{d.Application_ID}}</td>
+    <td>{{d.Approved_Amount}}</td>
+    <td>{{d.Payment_Status}}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+
+</div>
+</body>
+</html>
