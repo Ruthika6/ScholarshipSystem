@@ -30,6 +30,7 @@ Scholarship-Management-System/
 ⚙️ Installation
 1️⃣ Clone the Repository
 git clone https://github.com/your-username/scholarship-management-system.git
+
 cd scholarship-management-system
 2️⃣ Create Virtual Environment
 python -m venv venv
