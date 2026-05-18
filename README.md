@@ -149,4 +149,3 @@ This project is for educational purposes.
 
 **Ruthika Reddy**
 
-Built with ❤️ using Flask and MySQL.
